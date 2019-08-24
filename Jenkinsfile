@@ -44,7 +44,7 @@ pipeline {
                 milestone(1)
    //             withCredentials([usernamePassword(credentialsId: 'webserver_login', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
                     script {
-                        sh "sshpass -p 'jenkins' -v ssh -o StrictHostKeyChecking=no deploy@$jenkins \"docker pull driver23/train-schedule:$latest\""
+                        sh "sshpass -p 'jenkins' -v ssh -o StrictHostKeyChecking=no deploy@$jenkins \"docker pull driver23/train-schedule:latest\""
     //                    try {
     //                        sh "sshpass -p '$USERPASS' -v ssh -o StrictHostKeyChecking=no $USERNAME@$prod_id \"docker stop train-schedule\""
     //                        sh "sshpass -p '$USERPASS' -v ssh -o StrictHostKeyChecking=no $USERNAME@$prod_id  \"docker rm train-schedule\""
