@@ -14,7 +14,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("driver2369/train-schedule")
+                    app = docker.build("driver23/train-schedule")
                     // saves the results of the docker.build call and then it can be called inside the inside block and it will perform smoke test if it is running 
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
